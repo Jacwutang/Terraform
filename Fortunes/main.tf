@@ -50,7 +50,7 @@ resource "aws_security_group" "sg_fortunes" {
     lifecycle {
         create_before_destroy = true
     }
-    
+
     ingress {
         protocol  = "tcp"
         from_port = 80
