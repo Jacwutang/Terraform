@@ -54,7 +54,7 @@ resource "aws_s3_object" "upload" {
   for_each      = fileset("${path.module}/html/", "*")
   bucket        = aws_s3_bucket.web.id
   key           = each.value
-  source        = "html/${each.value}"
-  etag          = filemd5("${path.module}/html/${each.value}")
+  source        = "${path.module}/html/${each.value}"
+  #etag          = filemd5("${path.module}/html/${each.value}")
   content_type  = "text/html"
 }
