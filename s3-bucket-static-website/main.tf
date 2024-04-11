@@ -4,5 +4,5 @@ provider "aws" {
 
 module "website_s3_bucket" {
     source = "./modules/s3-bucket"
-    bucket_name = "my-tf-bucket-jackwu350"
+    bucket_name = "dev.jacwutang.com"
 }
